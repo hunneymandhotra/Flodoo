@@ -72,7 +72,7 @@ class _TaskFormScreenState extends ConsumerState<TaskFormScreen> {
 
     setState(() => _isLoading = true);
 
-    // Simulated 2-second delay
+    // Added artificial delay to fulfill the assignment requirement for loading states
     await Future.delayed(const Duration(seconds: 2));
 
     final allTasks = ref.read(taskListProvider).value ?? [];

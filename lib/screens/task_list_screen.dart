@@ -60,7 +60,7 @@ class _TaskListScreenState extends ConsumerState<TaskListScreen> {
                   },
                 ),
     
-                // Progress Header (WOW Factor)
+                // Project progress summary widget
                 allTasksAsync.when(
                   data: (tasks) => _ProgressHeader(tasks: tasks).animate().fadeIn().scale(),
                   loading: () => const SizedBox.shrink(),
@@ -100,7 +100,7 @@ class _TaskListScreenState extends ConsumerState<TaskListScreen> {
                         ).animate().fadeIn();
                       }
     
-                      // Reorderable List (Stretch Goal 3)
+                      // Main task list supporting drag-and-drop reordering
                       return ReorderableListView.builder(
                         padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
                         itemCount: tasks.length,
