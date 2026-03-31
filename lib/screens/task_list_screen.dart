@@ -144,7 +144,7 @@ class _TaskListScreenState extends ConsumerState<TaskListScreen> {
                                 },
                               ),
                             ),
-                          ).animate().fadeIn(delay: (index * 50).ms).slideY(begin: 0.1);
+                          );
                         },
                       );
                     },
